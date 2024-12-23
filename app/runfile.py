@@ -28,7 +28,7 @@ def create_instances():
 
     session.add_all([band1, band2, band3, band4, band5, venue1, venue2, venue3, venue4, venue5, concert1, concert2, concert3])
     session.commit()
-    
+
 def queries():
     most_performances = Band.most_performances(session)
     if most_performances:
@@ -39,4 +39,5 @@ def queries():
         print(concert.introduction())
         
 if __name__ == '__main__':
-    queries()
+    #create_instances()
+    queries()        

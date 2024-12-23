@@ -1,6 +1,8 @@
 from sqlalchemy import (Column, Integer, 
 String,ForeignKey,create_engine, func)
 from sqlalchemy.orm import declarative_base, relationship
+from os.path import join, dirname, abspath
+
 
 engine = create_engine("sqlite:///concerts.db")
 
