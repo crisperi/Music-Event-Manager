@@ -1,0 +1,10 @@
+create Band, Concert, Venue class in a models.py file
+create migration environment
+Band - venue has a many to - many relationship
+A Concert belongs to a Band, and a Concert also belongs to a Venue. 
+
+1band = many concerts
+1 concert = one Band
+
+1 band = many venues
+many venues = many bands
