@@ -4,9 +4,10 @@ from sqlalchemy.orm import declarative_base, relationship
 from os.path import join, dirname, abspath
 
 
-engine = create_engine("sqlite:///concerts.db")
+current_dir = dirname(abspath(__file__))
+database_path = join(current_dir, '..', 'concerts.db')
 
-
+engine = create_engine(f"sqlite:///{database_path}")
 Base = declarative_base()
 
 

@@ -5,11 +5,12 @@ from models import Band, Venue,Concert
 
 
 Base.metadata.create_all(engine)
-    
-Session= sessionmaker(bind=engine)
+
+Session = sessionmaker(bind=engine)
 session = Session()
 
 def create_instances():
+    
     band1 = Band(name="Sonic Wave", hometown="Denver")
     band2 = Band(name="Echo Hunters", hometown="Los Angeles")
     band3 = Band(name="Silent Storm", hometown="Austin")
@@ -37,7 +38,7 @@ def queries():
     concert = session.query(Concert).first()
     if concert:
         print(concert.introduction())
-        
+
 if __name__ == '__main__':
-    #create_instances()
+    create_instances()
     queries()        
