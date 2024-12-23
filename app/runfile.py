@@ -39,5 +39,4 @@ def queries():
         print(concert.introduction())
         
 if __name__ == '__main__':
-    #create_instances()
-    queries()            
+    queries()
