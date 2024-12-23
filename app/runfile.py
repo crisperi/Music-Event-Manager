@@ -17,7 +17,7 @@ def create_instances():
     band4 = Band(name="Neon Dreams", hometown="New York")
     band5 = Band(name="The Rolling Notes", hometown="San Francisco")
 
-    venue1 = Venue(title="The Grand Hall", city="London")
+    venue1 = Venue(title="Edian", city="London")
     venue2 = Venue(title="Electric Arena", city="New York")
     venue3 = Venue(title="Skyline Stage", city="Phoenix")
     venue4 = Venue(title="Madison Square Garden", city="New York")
