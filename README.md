@@ -15,9 +15,17 @@ This project is a Python-based application that utilizes SQLAlchemy for database
 
 ## Project Structure
 
-
-Music-Event-Manager/ ├── app/ │ ├── models.py │ ├── runfile.py │ └── migrations/ │ └── versions/ │ └── <migration_files>.py ├── concerts.db ├── Pipfile ├── Pipfile.lock └── README.md
-
+Music-Event-Manager/
+├── app/
+│   ├── models.py
+│   ├── runfile.py
+│   └── migrations/
+│       └── versions/
+│           └── <migration_files>.py
+├── concerts.db
+├── Pipfile
+├── Pipfile.lock
+└── README.md
 
 ## Setup
 
