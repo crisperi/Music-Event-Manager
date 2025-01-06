@@ -9,6 +9,7 @@ Base.metadata.create_all(engine)
 session = Session() 
 
 def create_instances():
+    #prevent reduplication of data
     if session.query(Band).first():
         print("Sample data already exists. Skipping creation.")
         return
@@ -59,7 +60,7 @@ def main():
     print("Welcome to Music Event Manager!")
     while True:
         main_menu()
-        choice = input("Enter your choice (1-5): ")
+        choice = input("Enter your choice (1-6): ")
         if not handle_choice(choice, session):
             print("Goodbye!")
             break
