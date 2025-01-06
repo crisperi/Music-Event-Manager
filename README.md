@@ -18,13 +18,16 @@ This project is a Python-based application that utilizes SQLAlchemy for database
 ```
 Music-Event-Manager/
 ├── app/
+│   ├── cli.py
+│   ├── helpers.py
 │   ├── models.py
 │   ├── runfile.py
-│   └── migrations/
+└── migrations/
 │       └── versions/
 │           ├── <migration_file1>.py
 │           ├── <migration_file2>.py
-│           └── ...
+│           └── ...   
+├── alemic.ini
 ├── concerts.db
 ├── Pipfile
 ├── Pipfile.lock
@@ -72,6 +75,7 @@ The application includes custom queries for retrieving specific information:
 
 - `Band.most_performances()`: Returns the band with the most performances
 - `Concert.introduction()`: Generates an introduction for a concert
+- ...
 
 ## Contributing
 
