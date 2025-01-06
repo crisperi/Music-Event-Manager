@@ -5,14 +5,15 @@ from cli import main_menu, handle_choice
 
 # Initialize the database
 Base.metadata.create_all(engine)
-session = Session()  # Global session object
+#Session object to interact with the database
+session = Session() 
 
 def create_instances():
     if session.query(Band).first():
         print("Sample data already exists. Skipping creation.")
         return
     try:
-    #bands
+ #bands
         band1 = Band(name="Sonic Wave", hometown="Denver")
         band2 = Band(name="Echo Hunters", hometown="Los Angeles")
         band3 = Band(name="Silent Storm", hometown="Austin")
@@ -64,7 +65,6 @@ def main():
             break
 
 if __name__ == '__main__':
-    #To prevent my data from being added multiple times
-    if input("Do you want to add the sample data? (yes/no): ").lower() == 'yes':
-        create_instances()
+  
+    create_instances()
     main()
