@@ -18,7 +18,7 @@ def validate_string(text):
     return True
 
 def get_user_input(prompt, validator=None):
-    """Get and validate user input"""
+    #Get and validate user input
     while True:
         value = input(prompt)
         if validator is None or validator(value):
