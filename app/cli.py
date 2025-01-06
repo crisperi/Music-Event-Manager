@@ -7,7 +7,8 @@ def main_menu() :
     print("2. Add New Venue")   
     print("3. Schedule Concert")
     print("4. List All Bands")
-    print("5. Exit")
+    print("5. List All Concerts")
+    print("6. Exit")
     
     
 def get_user_input(prompt, validator=None):
@@ -42,6 +43,15 @@ def list_bands(session):
     for band in bands:
         print(f"- {band.name} from {band.hometown}")
 
+def list_concerts(session):
+    concerts = session.query(Concert).all()
+    if not concerts:
+        print("No concerts found.")
+        return
+    print("\nAll Concerts:")
+    for concert in concerts:
+        print(f"- {concert.band.name} at {concert.venue.title} on {concert.date}")
+    
 def handle_choice(choice, session):
     if choice == '1':
         add_band(session)
@@ -52,7 +62,9 @@ def handle_choice(choice, session):
     elif choice == '4':
         list_bands(session)
     elif choice == '5':
-        return False
+         list_concerts(session) 
+    elif choice == '6':
+          return False
     return True    
 
 def schedule_concert(session):
